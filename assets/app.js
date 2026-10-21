@@ -232,48 +232,7 @@ const MENOS_MOVIMIENTO = window.matchMedia('(prefers-reduced-motion: reduce)');
   });
 })();
 
-/* ── 5. Copiar enlace y avisos ──────────────────────────── */
-(function compartir() {
-  const aviso = document.getElementById('toast');
-  let temporizador;
-
-  function mostrar(mensaje) {
-    if (!aviso) return;
-    aviso.textContent = mensaje;
-    aviso.classList.add('visible');
-    clearTimeout(temporizador);
-    temporizador = setTimeout(() => aviso.classList.remove('visible'), 2600);
-  }
-
-  async function copiar(texto) {
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(texto);
-        return true;
-      }
-    } catch (error) { /* seguimos con el respaldo */ }
-
-    const area = document.createElement('textarea');
-    area.value = texto;
-    area.setAttribute('readonly', '');
-    area.style.cssText = 'position:fixed;top:-1000px;opacity:0';
-    document.body.appendChild(area);
-    area.select();
-
-    let listo = false;
-    try { listo = document.execCommand('copy'); } catch (error) { listo = false; }
-
-    area.remove();
-    return listo;
-  }
-
-  document.getElementById('copyLink')?.addEventListener('click', async () => {
-    const listo = await copiar(window.location.href);
-    mostrar(listo ? 'Enlace copiado' : 'No se pudo copiar, pero puede copiarlo de la barra');
-  });
-})();
-
-/* ── 6. Recuerdos: fotos reemplazables ──────────────────── */
+/* ── 5. Recuerdos: fotos reemplazables ──────────────────── */
 (function recuerdos() {
   const seccion = document.getElementById('recuerdos');
   const galeria = document.getElementById('galeria');
