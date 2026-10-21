@@ -400,6 +400,45 @@ main{ position:relative; z-index:2; }
   color:rgba(142,156,182,.7);
 }
 
+/* poema completo: lectura cómoda */
+.cita--poema{
+  max-width:32rem;
+  text-align:left;
+  padding-bottom:clamp(1.4rem, 4vw, 2rem);
+}
+.cita--poema .estrofa{
+  margin:0 0 1.5em;
+  text-indent:0;
+}
+.cita--poema .cierre-poema{
+  margin-bottom:0;
+  color:#fff;
+  font-size:clamp(1.22rem, 3.8vw, 1.5rem);
+  letter-spacing:.01em;
+}
+.cita--poema .firma-poema{
+  margin-top:2rem;
+  padding-top:1.2rem;
+  border-top:1px solid rgba(206,222,250,.1);
+  text-align:right;
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.05rem;
+  letter-spacing:.02em;
+  text-transform:none;
+  color:rgba(206,222,250,.72);
+}
+.cita--poema .firma-poema .cita-nota{
+  display:block;
+  margin-top:.35rem;
+  font-family:var(--sans);
+  font-style:normal;
+  font-size:.63rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(142,156,182,.62);
+}
+
 /* ── la carta ────────────────────────────────────────────── */
 
 .epigrafe{
