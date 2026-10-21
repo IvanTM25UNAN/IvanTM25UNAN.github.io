@@ -409,6 +409,9 @@ main{ position:relative; z-index:2; }
 .cita--poema .estrofa{
   margin:0 0 1.5em;
   text-indent:0;
+  font-size:clamp(.97rem, 2.7vw, 1.28rem);
+  line-height:1.72;
+  text-wrap:pretty;
 }
 .cita--poema .cierre-poema{
   margin-bottom:0;
@@ -856,6 +859,8 @@ footer p{
   .eyebrow{ font-size:.62rem; letter-spacing:.22em; }
   .epigrafe{ padding-left:.9rem; }
   .epigrafe p{ line-height:1.85; }
+  .cita{ padding:1.5rem 1.15rem; border-radius:16px; }
+  .cita--poema .estrofa{ margin-bottom:1.15em; line-height:1.68; }
   .letter p{ text-align:left; hyphens:none; }
   .letter .sign{ text-align:right; }
   .btn{ padding:.9rem 1.25rem; font-size:.72rem; letter-spacing:.16em; }
