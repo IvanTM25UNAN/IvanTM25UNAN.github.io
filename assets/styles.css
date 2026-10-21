@@ -359,6 +359,23 @@ main{ position:relative; z-index:2; }
 
 /* ── la carta ────────────────────────────────────────────── */
 
+.epigrafe{
+  max-width:33rem;
+  margin:0 auto clamp(2.2rem, 5.5vw, 3.4rem);
+  padding-left:1.1rem;
+  border-left:1px solid rgba(206,222,250,.15);
+  text-align:left;
+}
+.epigrafe p{
+  margin:0;
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(.99rem, 2.7vw, 1.11rem);
+  line-height:1.9;
+  letter-spacing:.015em;
+  color:rgba(178,192,214,.6);
+}
+
 .letter{
   position:relative;
   max-width:var(--ancho);
@@ -755,6 +772,8 @@ footer p{
 
 @media (max-width: 640px){
   .eyebrow{ font-size:.62rem; letter-spacing:.22em; }
+  .epigrafe{ padding-left:.9rem; }
+  .epigrafe p{ line-height:1.85; }
   .letter p{ text-align:left; hyphens:none; }
   .letter .sign{ text-align:right; }
   .btn{ padding:.9rem 1.25rem; font-size:.72rem; letter-spacing:.16em; }
