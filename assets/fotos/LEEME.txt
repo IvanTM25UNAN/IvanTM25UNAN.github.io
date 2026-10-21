@@ -1,0 +1,22 @@
+FOTOS
+=====
+
+Ya hay dos fotos puestas: foto-1.jpg y foto-2.jpg.
+Para agregar mas, usa estos nombres exactos:
+
+    foto-1.jpg   <- ya esta
+    foto-2.jpg   <- ya esta
+    foto-3.jpg
+    foto-4.jpg
+    foto-5.jpg
+    foto-6.jpg
+
+Formatos: .jpg, .webp o .png (se busca en ese orden).
+Puedes usar menos de 6: las que falten no se muestran.
+Si no hay ninguna, la seccion "Recuerdos" no aparece.
+
+Consejos:
+- Ancho ideal: 900 a 1200 pixeles. Peso: menos de 500 KB cada una.
+- Verticales se ven mejor (la tarjeta es 4:5).
+- Para cambiar el texto de abajo de cada foto, edita <figcaption> en index.html.
+- Para cambiar el orden, solo mueve los nombres de archivo.
